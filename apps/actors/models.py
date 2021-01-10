@@ -1,6 +1,6 @@
 from django.db import models
 
-from InterviewManager.utils import TimeStampedModel
+from apps.commons.models import TimeStampedModel
 
 """
 - This would be better if attributes we store against Student & Interviewer 

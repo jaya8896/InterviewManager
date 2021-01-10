@@ -1,6 +1,6 @@
 from django.db import models
 
-from InterviewManager.utils import TimeStampedModel
+from apps.commons.models import TimeStampedModel
 from apps.actors.models import Student
 
 
