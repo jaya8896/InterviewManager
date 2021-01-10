@@ -1,6 +1,8 @@
 import os
 import re
 
+from django.db import models
+
 
 def is_true(value):
     return value in ['true', '1', 'True', True, 1]
@@ -31,3 +33,11 @@ def read_env():
             if m3:
                 val = re.sub(r'\\(.)', r'\1', m3.group(1))
             os.environ.setdefault(key, val)
+
+
+class TimeStampedModel(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True
