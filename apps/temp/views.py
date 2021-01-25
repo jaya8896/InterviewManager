@@ -1,3 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
+from rest_framework.response import Response
+from rest_framework.status import HTTP_400_BAD_REQUEST
+from rest_framework.views import APIView
